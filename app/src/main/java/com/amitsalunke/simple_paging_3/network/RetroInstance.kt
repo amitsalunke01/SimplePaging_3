@@ -1,4 +1,4 @@
-package com.amitsalunke.network
+package com.amitsalunke.simple_paging_3.network
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
