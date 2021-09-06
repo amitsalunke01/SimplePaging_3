@@ -13,7 +13,7 @@ import com.amitsalunke.simple_paging_3.data.CharacterData
 import com.amitsalunke.simple_paging_3.data.Info
 import com.bumptech.glide.Glide
 
-class RecyclerViewAdapter : PagingDataAdapter<CharacterData, RecyclerViewAdapter.MyViewHolder>(DiffUtilCallBack1()) {
+class RecyclerViewAdapter : PagingDataAdapter<CharacterData, RecyclerViewAdapter.MyViewHolder>(DiffUtilCallBack()) {
     override fun onBindViewHolder(holder: RecyclerViewAdapter.MyViewHolder, position: Int) {
         holder.bind(getItem(position)!!)
     }
@@ -37,7 +37,7 @@ class RecyclerViewAdapter : PagingDataAdapter<CharacterData, RecyclerViewAdapter
         }
     }
 
-    class DiffUtilCallBack1:DiffUtil.ItemCallback<CharacterData>(){
+    class DiffUtilCallBack:DiffUtil.ItemCallback<CharacterData>(){
         override fun areItemsTheSame(oldItem: CharacterData, newItem: CharacterData): Boolean {
             return oldItem.name == newItem.name
         }
